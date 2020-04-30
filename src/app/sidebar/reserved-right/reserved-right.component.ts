@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-reserved-right',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reserved-right.component.scss']
 })
 export class ReservedRightComponent implements OnInit {
+  @Input() rabbit: any;
   year: number = 2019;
   reservedRight: string = 'Все права защищены.';
   constructor() { }

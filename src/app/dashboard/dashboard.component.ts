@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
+@Input() config : any;
+@Input() rabbit: any;
+@Input() fruits: any;
+@Input() motor: any;
+@Input() color: string;
   
   constructor() { }
   ngOnInit(): void {
+    console.log(this.config);
   }
 
 }

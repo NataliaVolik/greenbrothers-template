@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+@Input() fox : any;
+@Input() fox2 : any;
+@Input() animals: any;
+@Input() koleso: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.fox)
   }
 
 }
