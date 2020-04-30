@@ -1,0 +1,14 @@
+.sidebar{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 300;
+  width: 200px;
+  background-color: #ffffff;
+  overflow: auto;
+  left: 0;
+  overflow-x: hidden;
+  text-align: center;
+  z-index: 999;
+  border-right: 1px solid #777777;
+}

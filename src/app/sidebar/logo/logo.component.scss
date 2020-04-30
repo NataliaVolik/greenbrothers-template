@@ -1,0 +1,22 @@
+.image-container {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .sidebar-name {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 10px 0;
+      text-transform: uppercase;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      background-color: #D1A71D;
+      margin: 10px 0px;
+    }
+}
