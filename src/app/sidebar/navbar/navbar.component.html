@@ -1,8 +1,7 @@
 <div class="nav-menu">
   <ul>
-    <li><a href="#home" class="pt-link active"><span class="nav-menu-icon"></span>Главная </a></li>
-    <li><a href="#about" class="pt-link"><span class="nav-menu-icon"></span>О компании</a></li>
-    <li><a href="#portfolio" class="pt-link"><span class="nav-menu-icon"></span>Портфолио</a></li>
-    <li><a href="#contact" class="pt-link"><span class="nav-menu-icon"></span>Контакты</a></li>
+    <li *ngFor="let item of nav">
+      <a href="#" class="pt-link active">{{item.name}}</a>
+    </li>
   </ul>
 </div>

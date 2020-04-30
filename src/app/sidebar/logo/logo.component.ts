@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
-
+  textLogo: string = 'Green Brothers';
   constructor() { }
 
   ngOnInit(): void {
