@@ -6,12 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./logo.component.scss']
 })
 export class LogoComponent implements OnInit {
-@Input() lolipop: any;
-@Input() dog: any;
+  @Input() conf: any;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.lolipop);
+
   }
 
 }

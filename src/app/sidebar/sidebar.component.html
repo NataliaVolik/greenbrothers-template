@@ -1,15 +1,12 @@
    <!--Header Start-->
    <div class="sidebar">
      <div class="header-content">
-       <p *ngFor="let item of koleso">
-        {{item.name}}
-       </p>
        <!--Main Header-->
-       <app-logo [lolipop]='fox' [dog]="animals[0]"></app-logo>
+       <app-logo [conf]="conf"></app-logo>
          <!--Nav Menus-->
-        <app-navbar [navconf]='fox2' [cat]="animals[1]"></app-navbar>
+        <app-navbar [conf]="conf"></app-navbar>
          <!--Nav Footer-->
-        <app-reserved-right [rabbit]="animals[2]"></app-reserved-right>
+        <app-reserved-right [conf]="conf"></app-reserved-right>
      </div>
     </div>
    <!--Header End-->

@@ -6,15 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-@Input() fox : any;
-@Input() fox2 : any;
-@Input() animals: any;
-@Input() koleso: any;
+@Input() conf: any;
+
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.fox)
+  
   }
 
 }

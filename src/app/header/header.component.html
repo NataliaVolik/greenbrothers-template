@@ -1,13 +1,4 @@
  <!--Page Heading-->
  <div class="page-heading">
-   <h2 [style.color]="color">{{pageHeading}}</h2>
-   <p>
-     У волка {{wolf.tail}} хвост,
-     У волка есть ребенок {{wolf.children[1].name}}, 
-     {{wolf.children | json}}
-   </p>
-   <p *ngFor="let fox of wolf.children">
-     {{fox.name}}
-   </p>
-  
+   <h2>{{config.dashboard.header.title}}</h2>
  </div>

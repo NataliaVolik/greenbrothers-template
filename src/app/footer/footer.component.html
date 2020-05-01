@@ -1,18 +1,4 @@
 <div class="footer">
-  <p>{{postName}}</p>
-  <p>{{contactInfo}}<a href="mailto:greenbrothers@gmail.com">{{linkEmail}}</a></p>
-
- 
-  <table>
-    <tr *ngFor="let fruit of fruits">
-      <td>{{fruit.name}}</td>
-      <td>{{fruit.count}}</td>
-      <td>{{fruit.isRed}}</td>
-    </tr>
-  </table>
-
-  <p>
-    Шестеренки: {{motor.kog}}
-    Клапана: {{motor.klapan}}
-  </p>
+  <p>{{config.dashboard.footer.name}}</p>
+  <p>{{config.dashboard.footer.info}}<a href="mailto:greenbrothers@gmail.com"> {{config.dashboard.footer.contact}}</a></p>
 </div>

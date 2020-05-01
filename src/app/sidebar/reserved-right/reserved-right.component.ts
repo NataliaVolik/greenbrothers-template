@@ -6,9 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./reserved-right.component.scss']
 })
 export class ReservedRightComponent implements OnInit {
-  @Input() rabbit: any;
-  year: number = 2019;
-  reservedRight: string = 'Все права защищены.';
+@Input() conf: any;
   constructor() { }
 
   ngOnInit(): void {

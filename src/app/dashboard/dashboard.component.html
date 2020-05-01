@@ -1,37 +1,32 @@
 <div class="dashboard">
 <section id="about" class="about-section pt-page">
   <div class="section-container">
-    {{config.dashboard.header.title}}
-   <app-header [wolf]="rabbit" [color]="color"></app-header>
+   <app-header [config]="config"></app-header>
     <div class="about mb-70">
-        <h3 class="mb-20">{{config.title}}</h3>
+        <h3 class="mb-20">{{config.dashboard.content.title}}</h3>
         <div class="about-info">
-          <p>У кролика есть {{rabbit.leg}}, 
-            У кролика есть {{rabbit.tail}} хвост,
-            У кролика есть {{rabbit.eyes}} глаза
+          <p>
+            {{config.dashboard.content.text_1}}
           </p>
           <p>
-            {{config.text_1}}
+           {{config.dashboard.content.text_2}}
           </p>
-          <p>
-           {{config.text_2}}
-          </p>
-          <p>{{config.text_3}}</p>
-          <p>{{config.text_4}}</p>
-          <p>{{config.text_5}}</p>
-          <p>{{config.text_6}}</p>
-          <p>{{config.text_7}}</p>
-          <p>{{config.text_8}}</p>
+          <p>{{config.dashboard.content.text_3}}</p>
+          <p>{{config.dashboard.content.text_4}}</p>
+          <p>{{config.dashboard.content.text_5}}</p>
+          <p>{{config.dashboard.content.text_6}}</p>
+          <p>{{config.dashboard.content.text_7}}</p>
+          <p>{{config.dashboard.content.text_8}}</p>
+           <p>У кролика есть {{rabbit.leg}},
+             У кролика есть {{rabbit.tail}} хвост,
+             У кролика есть {{rabbit.eyes}} глаза
+           </p>
           <div class="mt-30">
-            <a class="btn-main mt-30" href="#contact">{{config.contact_data}}</a>
+            <a class="btn-main mt-30" href="#contact">{{config.dashboard.content.contact}}</a>
           </div>
         </div>
     </div>
   </div>
 </section>
-<app-footer 
-[fruits]='fruits'
-[motor]='motor'
->
-</app-footer>
+<app-footer [config]="config"></app-footer>
 </div>

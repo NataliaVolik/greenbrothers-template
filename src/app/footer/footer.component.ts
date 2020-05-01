@@ -6,11 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  @Input() fruits : any;
-  @Input() motor: any;
-  postName: string = 'Posted by: Hege Refsnes';
-  contactInfo: string = 'Contact information:';
-  linkEmail: string = 'greenbrothers@gmail.com';
+ @Input() config: any;
   constructor() { }
 
   ngOnInit(): void {

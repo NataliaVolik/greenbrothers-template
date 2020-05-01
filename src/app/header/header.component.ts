@@ -6,14 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Input() wolf : any;
-  @Input() color: string;
-  pageHeading: string = 'О компании';
+@Input() config : any;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.wolf);
-    console.log(this.wolf.children[1])
+    
   }
 
 }
