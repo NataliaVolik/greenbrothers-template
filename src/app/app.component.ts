@@ -59,4 +59,10 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     console.log(this.configApp);
   }
+  changeVal(resalt){
+    console.log(resalt);
+  }
+  eventHeader(mystring: string){
+    alert(mystring);
+  }
 }

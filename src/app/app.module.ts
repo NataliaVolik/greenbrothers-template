@@ -10,6 +10,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ReservedRightComponent } from './sidebar/reserved-right/reserved-right.component';
 import { NavbarComponent } from './sidebar/navbar/navbar.component';
 import { LogoComponent } from './sidebar/logo/logo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,13 @@ import { LogoComponent } from './sidebar/logo/logo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatChipsModule,
+    MatButtonToggleModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

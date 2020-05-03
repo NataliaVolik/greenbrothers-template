@@ -1,32 +1,101 @@
 <div class="dashboard">
 <section id="about" class="about-section pt-page">
   <div class="section-container">
-   <app-header [config]="config"></app-header>
+   <app-header 
+   [config]="config" 
+   (valueChange)="headerUpdate($event)"
+   (valtEvent)="valtEventFunc($event)"
+   (firstEvent)="eventFirst()"
+   (secondEvent)="eventSecond()"
+   (thirdButton)="eventThird()"
+   (fourButton)="eventFour($event)"
+   (fiveEvent)="eventFive($event)"
+   ></app-header>
+    
     <div class="about mb-70">
+
+      <div *ngIf="firstTab">
         <h3 class="mb-20">{{config.dashboard.content.title}}</h3>
-        <div class="about-info">
-          <p>
-            {{config.dashboard.content.text_1}}
-          </p>
-          <p>
-           {{config.dashboard.content.text_2}}
-          </p>
-          <p>{{config.dashboard.content.text_3}}</p>
-          <p>{{config.dashboard.content.text_4}}</p>
-          <p>{{config.dashboard.content.text_5}}</p>
-          <p>{{config.dashboard.content.text_6}}</p>
-          <p>{{config.dashboard.content.text_7}}</p>
-          <p>{{config.dashboard.content.text_8}}</p>
+      </div>
+
+
+      <div *ngIf="secondTab">
+         <div class="about-info">
+           <p>
+             {{config.dashboard.content.text_1}}
+           </p>
+           <p>
+             {{config.dashboard.content.text_2}}
+           </p>
+           <p>{{config.dashboard.content.text_3}}</p>
+           <p>{{config.dashboard.content.text_4}}</p>
+           <p>{{config.dashboard.content.text_5}}</p>
+           <p>{{config.dashboard.content.text_6}}</p>
+           <p>{{config.dashboard.content.text_7}}</p>
+           <p>{{config.dashboard.content.text_8}}</p>
            <p>У кролика есть {{rabbit.leg}},
              У кролика есть {{rabbit.tail}} хвост,
              У кролика есть {{rabbit.eyes}} глаза
            </p>
-          <div class="mt-30">
-            <a class="btn-main mt-30" href="#contact">{{config.dashboard.content.contact}}</a>
-          </div>
-        </div>
+           <div class="mt-30">
+             <a class="btn-main mt-30" href="#contact">{{config.dashboard.content.contact}}</a>
+           </div>
+         </div>
+      </div>
+
+
+      <div *ngIf="thirdTab">
+        <mat-chip-list>
+          <mat-chip>Papadum</mat-chip>
+          <mat-chip>Naan</mat-chip>
+          <mat-chip>Dal</mat-chip>
+        </mat-chip-list>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
+
+
+      <div *ngIf="fourTab">
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+          <mat-button-toggle value="bold">Bold</mat-button-toggle>
+          <mat-button-toggle value="italic">Italic</mat-button-toggle>
+          <mat-button-toggle value="underline">Underline</mat-button-toggle>
+        </mat-button-toggle-group>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      </div>
+
+
+      <div *ngIf="fiveTab">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+        <p>
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+        
+       
     </div>
   </div>
 </section>
-<app-footer [config]="config"></app-footer>
+<app-footer
+ [config]="config"
+  (helloSend)="helloSendWork($event)"
+></app-footer>
 </div>

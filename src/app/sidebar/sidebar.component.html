@@ -2,7 +2,10 @@
    <div class="sidebar">
      <div class="header-content">
        <!--Main Header-->
-       <app-logo [conf]="conf"></app-logo>
+       <app-logo 
+       [conf]="conf"
+       (headClickEvent)="headClick($event)"
+       ></app-logo>
          <!--Nav Menus-->
         <app-navbar [conf]="conf"></app-navbar>
          <!--Nav Footer-->

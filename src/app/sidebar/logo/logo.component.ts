@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-logo',
@@ -7,10 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LogoComponent implements OnInit {
   @Input() conf: any;
+  @Output() headClickEvent = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
 
   }
-
+  headerClick(){
+    this.headClickEvent.emit();
+  }
 }

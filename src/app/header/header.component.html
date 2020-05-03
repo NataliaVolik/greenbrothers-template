@@ -2,3 +2,36 @@
  <div class="page-heading">
    <h2>{{config.dashboard.header.title}}</h2>
  </div>
+ <div class="p-0">
+  <button mat-raised-button (click)="onClick('Basic')">Первая вкладка</button>
+  <button mat-raised-button color="primary" (click)="onClick(22)">Вторая вкладка</button>
+  <button mat-raised-button color="accent" (click)="onClick(33)">Третья вкладка</button>
+  <button mat-raised-button color="warn" (click)="initClick(44)">Четвертая вкладка</button>
+  <button mat-raised-button color="warn" (click)="onClick(55)">Пятая вкладка</button>
+ </div>
+
+ 
+
+ <div *ngIf="value === 'Basic'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, fugiat!</div>
+ <div *ngIf="value === 22">Второй div</div>
+ <div *ngIf="value === 33">Lorem, ipsum.</div>
+ <div *ngIf="value === 44">Wolf Rabbit</div>
+ <div *ngIf="value === 55">Открыт 5 tab</div>
+
+ <div [ngSwitch]="value">
+   
+   <div *ngSwitchCase="'Basic'">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+   <div *ngSwitchCase="22">Второй div</div>
+   <div *ngSwitchCase="33">Lorem, ipsum.</div>
+   <div *ngSwitchCase="44">Wolf Rabbit</div>
+   <div *ngSwitchCase="55">Открыт 5 tab</div>
+ </div>
+
+
+
+
+ <button mat-raised-button (click)="clickFirstButton()">Первая вкладка</button>
+ <button mat-raised-button color="primary" (click)="clickSecondButton()">Вторая вкладка</button>
+ <button mat-raised-button color="accent" (click)="clickThirdButton()">Третья вкладка</button>
+ <button mat-raised-button color="warn" (click)="clickFourButton()">Четвертая вкладка</button>
+ <button mat-raised-button color="warn" (click)="clickFiveButton()">Пятая вкладка</button>

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -7,12 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 @Input() conf: any;
-
+@Output() hclick = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   
   }
-
+  headClick($event){
+    this.hclick.emit('я был внутри сайдбара');
+  }
 }

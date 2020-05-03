@@ -1,10 +1,12 @@
 <app-sidebar
 [conf]="configApp"
+(hclick)="eventHeader($event)"
 >
 </app-sidebar>
 <app-dashboard 
 [config]="configApp" 
 [rabbit]="rabbit" 
+(valChang)="changeVal($event)"
 >
 </app-dashboard>
 
